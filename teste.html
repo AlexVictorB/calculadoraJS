@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeypress="escrever()">
+   <input type="text" id="texto">
+   <h1 id="valor"></h1>
+   <input type="submit" value="enviar">
+   <script>
+
+
+       let texto = document.getElementById('texto');
+
+       console.log(texto);
+
+       texto.addEventListener("keypress", function(e) {
+           const keyCode = (e.keyCode ? e.keyCode : e.which);
+
+           console.log(keyCode)
+
+           //Exclui letras e mantém apenas números e simbolos
+
+           if(keyCode > 58) {
+               e.preventDefault();
+           }
+
+           if(keyCode < 41) {
+               e.preventDefault();
+           }
+       })
+
+       function escrever() {
+           document.getElementById('texto').value = "modificado"
+       }
+
+   </script>
+</body>
+</html>
