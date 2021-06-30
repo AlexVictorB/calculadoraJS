@@ -37,42 +37,55 @@ function calc() {
     }
 }
 
-// Bloco para fazer teclas funcionarem
-
-let texto = document.getElementById('display');
-
-console.log(texto);
-
-texto.addEventListener("keypress", function (e) {
-    const keyCode = (e.keyCode ? e.keyCode : e.which);
-
-    console.log(keyCode)
-
-    //Exclui letras e mantém apenas números e simbolos
-
-    if (keyCode > 58) {
-        e.preventDefault();
-        insert(String.fromCharCode(keyCode))
-
-    }
-
-    if (keyCode < 41) {
-        e.preventDefault();
-        insert(String.fromCharCode(keyCode))
-
-    }
-
-    
-})
-
-
-function write() {
-
-    let texto = document.getElementById('display');
-
-    addEventListener("keypress", function(e){
-        const keyCode = (e.keyCode ? e.keyCode : e.which);
-
-        document.getElementById('display').value = "ola";
-    })
+const keysMap = {
+    '0' : "key0",
+    '1' : "key1",
+    '2' : "key2",
+    '3' : "key3",
+    '4' : "key4",
+    '5' : "key5",
+    '6' : "key6",
+    '7' : "key7",
+    '8' : "key8",
+    '9' : "key9",
+    '+' : "key+",
+    '-' : "key-",
+    '/' : "key/",
+    '*' : "key*",
+    'Backspace0': "key<",
+    'Escape': "keyc"
 }
+
+
+
+function keyboardMap(e) {
+    key = e.key
+
+    const keysList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "/", "*", ".", "Enter", "Escape", "Backspace"]
+
+
+    if (keysList.indexOf(key) == key) {
+        console.log(key)
+        insert(key)
+        console.log(keysList)
+    } else if (key == 'Backspace') {
+        back()
+    }else if (key == 'Escape') {
+        clean()
+    }else if (key == 'Enter') {
+        calc()
+    }else if (key == '+') {
+        insert('+')
+    }else if (key == '-') {
+        insert('-')
+    }else if (key == '*') {
+        insert('*')
+    }else if (key == '/') {
+        insert('/')
+    }else if (key == '.') {
+        insert('.')
+    }
+    
+}
+
+document.addEventListener('keydown', keyboardMap)
