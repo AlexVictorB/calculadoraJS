@@ -6,45 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/coinStyle.css">
-    <title>Calculadora JS</title>
+
+        <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/convert.css">
+    <title>Conversor JS</title>
 </head>
 <body>
     <div class="fundo">
         <div class="calc">
             <h1>Coin JS</h1>
-            <p id="result"></p>
-            <table>
-                <tr>
-                    <td><button class="button-func" onclick="clean()">C</button></td>
-                    <td><button class="button-func" onclick="back()"><</button></td>
-                    <td><button class="button-func" onclick="insert('/')">/</button></td>
-                    <td><button class="button-func" onclick="insert('x')">x</button></td>
-                </tr>
-                <tr>
-                    <td><button class="button-func" onclick="insert('7')">7</button></td>
-                    <td><button class="button-func" onclick="insert('8')">8</button></td>
-                    <td><button class="button-func" onclick="insert('9')">9</button></td>
-                    <td><button class="button-func" onclick="insert('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="button-func" onclick="insert('4')">4</button></td>
-                    <td><button class="button-func" onclick="insert('5')">5</button></td>
-                    <td><button class="button-func" onclick="insert('6')">6</button></td>
-                    <td><button class="button-func" onclick="insert('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="button-func" onclick="insert('1')">1</button></td>
-                    <td><button class="button-func" onclick="insert('2')">2</button></td>
-                    <td><button class="button-func" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="button-func" style="height: 106px;" onclick="calc()">=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="button-func" style="width: 106px;">0</button></td>
-                    <td><button class="button-func" onclick="insert('.')">.</button></td>
-                </tr>
-            </table>
+            <div class="convert-options">
+                <button class="button-option">Dolar / Real</button>
+                <button class="button-option">Real / Dolar</button>
+                <button class="button-option">Bitcoin / Real</button>
+                <button class="button-option">Real / Bitcoin</button>
+            </div>
+            <input type="text" placeholder="Valor em Real">
+            <button class="button-convert">Converter</button>
+            <input type="text" placeholder="Valor em Dolar">
         </div>
+
+        <div class="option-bar">
+            <a href="/index.html"><img src="/images/calc.svg" alt="Calculadora" width="50px"></a>
+            <a href="CoinJS.html"><img src="/images/dolar.svg" alt="Conversor" width="50px"></a>
+            
+        </div>
+    </div>
     </div>
     <script src="./scripts/priceCoin.js"></script>
 </body>
