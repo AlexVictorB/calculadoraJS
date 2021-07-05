@@ -13,8 +13,6 @@
 
     <!--SCRIPTS-->
 
-    <script src="/scripts/convert.js"></script>
-
     <title>Conversor JS</title>
 </head>
 <body>
@@ -28,9 +26,15 @@
                 <button class="button-option">Real / Bitcoin</button>
             </div>
             <div class="convert-form">
-                <input type="text" placeholder="Valor em Real">
-                <button class="button-convert">Converter</button>
-                <input type="text" placeholder="Valor em Dolar">
+                <div>
+                    <p>Real</p>
+                    <input type="text" value="1,00" id="input-value">
+                </div>
+                <button class="button-convert" onclick="realToUsd()">Converter</button>
+                <div>
+                    <p>Dolar</p>
+                    <input type="text" placeholder="Valor em Dolar" id="output-value">
+                </div>
             </div>
 
         </div>
@@ -42,6 +46,6 @@
         </div>
     </div>
     </div>
-    <script src="./scripts/priceCoin.js"></script>
+    <script src="./scripts/convert.js"></script>
 </body>
 </html>
