@@ -28,7 +28,7 @@
     font-family: 'Roboto', cursive;
     font-size: 15px;
     cursor: pointer;
-    padding: 20px;
+    padding: 1rem 0.5rem;
     background-color: #6bd3d1;
     color: white;
     outline: none;
@@ -49,14 +49,14 @@
 
 input {
     background-color: white;
-    width: 9.2rem;
-    height: 30px;
+    width: 9rem;
+    height: 1.8rem;
     margin: 5px;
     color: rgb(105, 99, 99);
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: right;
-    padding: 5px;
+    padding: 0.32rem;
     outline: none;
     border: none;
     border-radius: 5px;

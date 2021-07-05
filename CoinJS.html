@@ -20,19 +20,19 @@
         <div class="calc">
             <h1>Coin JS</h1>
             <div class="convert-options">
-                <button class="button-option">Dolar / Real</button>
-                <button class="button-option">Real / Dolar</button>
-                <button class="button-option">Bitcoin / Real</button>
-                <button class="button-option">Real / Bitcoin</button>
+                <button class="button-option" onclick="realToUsd()">Real / Dolar</button>
+                <button class="button-option" onclick="usdToReal()">Dolar / Real</button>
+                <button class="button-option" onclick="btcToReal()">Bitcoin / Real</button>
+                <button class="button-option" onclick="realToBtc()">Real / Bitcoin</button>
             </div>
             <div class="convert-form">
                 <div>
-                    <p>Real</p>
+                    <p id="input-display">Dolar</p>
                     <input type="text" value="1,00" id="input-value">
                 </div>
                 <button class="button-convert" onclick="realToUsd()">Converter</button>
                 <div>
-                    <p>Dolar</p>
+                    <p id="output-display">Real</p>
                     <input type="text" placeholder="Valor em Dolar" id="output-value">
                 </div>
             </div>
