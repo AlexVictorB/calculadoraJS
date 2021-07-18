@@ -39,5 +39,11 @@
 .option-bar img {
     cursor: pointer;
     margin: .5rem 0.5rem 1rem 0.5rem;
+}
 
+.option-bar img:hover {
+    opacity: 60%;
+    transition-property: opacity, left, top, height;
+    transition-duration: 1s, 8s;
+   
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&family=Staatliches&display=swap" rel="stylesheet">
+
+        <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/imc.css">
+
+    <!--SCRIPTS-->
+
+    <title>IMC Js</title>
+</head>
+<body>
+    <div class="fundo">
+        <div class="calc">
+            <h1>IMC Js</h1>
+            <div class="convert-form">
+                <div>
+                    <p id="input-display">Altura</p>
+                    <input type="text" id="input-height">
+                </div>
+                <div>
+                    <p id="output-display">Peso</p>
+                    <input type="text" id="input-weight">
+                </div>
+                <button class="button-convert" onclick="calculate()">Converter</button>
+            </div>
+
+            <div class="display">
+                
+            </div>
+
+        </div>
+
+        <!--Modal-->
+
+
+        <!--Barra de navegação-->
+        <div class="option-bar">
+            <a href="/index.html"><img src="/images/calc.svg" alt="Calculadora" width="50px"></a>
+            <a href="/CoinJS.html"><img src="/images/dolar.svg" alt="Conversor" width="50px"></a>
+        </div>
+    </div>
+    </div>
+    <script src="./scripts/imc.js"></script>
+</body>
+</html>

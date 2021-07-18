@@ -1,3 +1,5 @@
+
+//API de cotações
 const url = "http://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
 
 function getValue(url) {
@@ -9,10 +11,32 @@ function getValue(url) {
     return request.responseText
 }
 
+//Definir modo de operação do conversor - padrão RtoU
+let mode = "RtoU"
+
+function convertButton() {
+    if(mode == "RtoU") {
+        realToUsd()
+    }
+
+    if(mode == "UtoR") {
+        usdToReal()
+    }
+
+    if(mode == "BtoR") {
+        btcToReal()
+    }
+
+    if(mode == "RtoB") {
+        realToBtc()
+    }
+}
 
 function realToUsd() {
     let jsonValues = JSON.parse(getValue(url))
     let jsonUsd = jsonValues["USDBRL"]
+
+    mode = "RtoU"
 
     document.getElementById("input-display").innerHTML = "Real"
     document.getElementById("output-display").innerHTML = "Dolar"
@@ -38,6 +62,8 @@ function realToUsd() {
 function usdToReal() {
     let jsonValues = JSON.parse(getValue(url))
     let jsonUsd = jsonValues["USDBRL"]
+
+    mode = "UtoR"
 
     document.getElementById("input-display").innerHTML = "Dolar"
     document.getElementById("output-display").innerHTML = "Real"
@@ -65,6 +91,8 @@ function btcToReal() {
     let jsonValues = JSON.parse(getValue(url))
     let jsonUsd = jsonValues["BTCBRL"]
 
+    mode = "BtoR"
+
     document.getElementById("input-display").innerHTML = "Bitcoin"
     document.getElementById("output-display").innerHTML = "Real"
     
@@ -90,6 +118,8 @@ function btcToReal() {
 function realToBtc() {
     let jsonValues = JSON.parse(getValue(url))
     let jsonUsd = jsonValues["BTCBRL"]
+
+    mode = "RtoB"
 
     document.getElementById("input-display").innerHTML = "Real"
     document.getElementById("output-display").innerHTML = "Bitcoin"

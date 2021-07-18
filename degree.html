@@ -9,43 +9,47 @@
 
         <!--ESTILOS CSS-->
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/convert.css">
+    <link rel="stylesheet" href="./styles/temp.css">
 
     <!--SCRIPTS-->
 
-    <title>Conversor JS</title>
+    <title>Temp Js</title>
 </head>
 <body>
     <div class="fundo">
         <div class="calc">
-            <h1>Coin JS</h1>
+            <h1>Temp Js</h1>
             <div class="convert-options">
-                <button class="button-option" onclick="realToUsd()">Real / Dolar</button>
-                <button class="button-option" onclick="usdToReal()">Dolar / Real</button>
-                <button class="button-option" onclick="btcToReal()">Bitcoin / Real</button>
-                <button class="button-option" onclick="realToBtc()">Real / Bitcoin</button>
+                <button class="button-option" onclick="celsiusToFahrenheit()">Celsius / Fahrenheit</button>
+                <button class="button-option" onclick="fahrenheitToCelsius()">Fahrenheit / Celsius</button>
             </div>
             <div class="convert-form">
                 <div>
-                    <p id="input-display">Real</p>
-                    <input type="text" value="1,00" id="input-value">
+                    <p id="input-display">Celsius</p>
+                    <input type="text" value="0°C" id="input-value">
                 </div>
                 <button class="button-convert" onclick="convertButton()">Converter</button>
                 <div>
-                    <p id="output-display">Dolar</p>
+                    <p id="output-display">Fahrenheit</p>
                     <input type="text" id="output-value">
                 </div>
             </div>
+            <div class="learning">
+                <a href="#">Veja como fazer as fórmulas</a>
+            </div>
 
         </div>
-<!--Barra de navegação-->
+
+        <!--Modal-->
+
+
+        <!--Barra de navegação-->
         <div class="option-bar">
             <a href="/index.html"><img src="/images/calc.svg" alt="Calculadora" width="50px"></a>
-            <a href="CoinJS.html"><img src="/images/dolar.svg" alt="Conversor" width="50px"></a>
-            
+            <a href="/CoinJS.html"><img src="/images/dolar.svg" alt="Conversor" width="50px"></a>
         </div>
     </div>
     </div>
-    <script src="./scripts/convert.js"></script>
+    <script src="./scripts/temp.js"></script>
 </body>
 </html>
