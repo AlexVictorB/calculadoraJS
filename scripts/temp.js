@@ -39,3 +39,18 @@ function fahrenheitToCelsius() {
 
     document.getElementById("output-value").value = `${celsius.toFixed(4)} °C`
 }
+
+function startModal() {
+    const modal = document.getElementById("modal-help")
+
+    modal.classList.add('show')
+
+    modal.addEventListener('click', (e)=> {
+        if(e.target.id == "modal-help" ) {
+            modal.classList.remove('show')
+        }else if(e.target.id == "close") {
+            modal.classList.remove('show')
+        }
+
+    })
+}

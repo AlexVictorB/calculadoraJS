@@ -67,12 +67,20 @@ input {
 }
 
 .display {
+    color: rgb(105, 99, 99);
     background-color: white;
     border-radius: 5px;
 
+    text-align: center;
     margin-top: 1rem;
     height: 5rem;
     width: 14rem;
 
+    margin-bottom: 1rem;
 
+}
+
+#link {
+    color: white;
+    text-decoration: none;
 }
