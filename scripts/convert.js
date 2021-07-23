@@ -2,7 +2,7 @@
 const url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
 
 function getValue(url) {
-    //let request = new XMLHttpRequest()
+    request = new XMLHttpRequest()
 
     const request = new 
     request.open("GET", url, false)
