@@ -1,9 +1,10 @@
-
 //API de cotações
-const url = "http://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
+const url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
 
 function getValue(url) {
-    let request = new XMLHttpRequest()
+    //let request = new XMLHttpRequest()
+
+    const request = new 
     request.open("GET", url, false)
     request.send()
 
