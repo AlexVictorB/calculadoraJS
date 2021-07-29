@@ -73,7 +73,7 @@ function usdToReal() {
 
     let realValue = document.getElementById("input-value").value
 
-    let conversionResult = parseFloat(realValue).toFixed(2) / dolarValue
+    let conversionResult = parseFloat(realValue).toFixed(2) * dolarValue
 
     //DEBUGGING
 
